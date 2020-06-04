@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './pages/products_overview_page.dart';
+import './pages/product_detail_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,6 +19,9 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: ProductsOverviewPage(),
+      routes: {
+        ProductDetailPage.routeName: (ctx) => ProductDetailPage(),
+      },
     );
   }
 }
